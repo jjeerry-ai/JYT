@@ -4,6 +4,20 @@
 
 界面采用毛玻璃（Glassmorphism）质感设计，蛇身带渐变配色与发光食物，并对操作手感与渲染性能做了专门优化。
 
+<p align="center">
+  <img src="docs/screenshot.png" alt="贪吃蛇游戏截图" width="420">
+</p>
+
+> 🎬 上面是游戏截图。把你自己的截图保存为 `docs/screenshot.png` 即可替换（也可用 GIF：将文件命名为 `docs/screenshot.gif` 并把上面的 `screenshot.png` 改成 `screenshot.gif`）。
+
+## 🕹️ 在线游玩
+
+部署 GitHub Pages 后，任何人都能直接在浏览器中游玩，无需下载：
+
+**👉 https://jjeerry-ai.github.io/JYT/**
+
+> 该链接在你按下方说明开启 GitHub Pages 后约 1 分钟内生效。
+
 ## ✨ 特性
 
 - **零依赖**：纯单文件 HTML，离线可玩，无需安装。
@@ -65,7 +79,10 @@ cd JYT
 
 ```
 JYT/
+├── index.html      # GitHub Pages 入口（内容与 snake.html 相同）
 ├── snake.html      # 游戏本体（HTML + CSS + JS 全部在内）
+├── docs/
+│   └── screenshot.png  # 游戏截图（用于 README 展示）
 ├── README.md       # 项目说明
 └── LICENSE         # Apache-2.0 许可证
 ```
@@ -80,6 +97,20 @@ JYT/
 | `SPEED` | 每步移动间隔（毫秒，越小越快） | `110` |
 
 例如想让蛇更快，把 `SPEED` 改成 `80` 即可。
+
+## 🌐 部署到 GitHub Pages
+
+让别人可以直接在线游玩，只需开启一次：
+
+1. 打开仓库的 **Settings（设置）** 页面。
+2. 左侧菜单点击 **Pages**。
+3. 在 **Build and deployment → Source** 选择 **Deploy from a branch**。
+4. **Branch** 选择 `main`，文件夹选择 `/ (root)`，点击 **Save**。
+5. 等待约 1 分钟，页面顶部会出现你的访问地址：
+
+   **https://jjeerry-ai.github.io/JYT/**
+
+之后每次 `git push` 更新 `index.html`，线上版本都会自动同步。
 
 ## 📄 许可证
 
